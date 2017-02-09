@@ -1,10 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace Complete
-{
-    public class TankHealth : MonoBehaviour
-    {
+namespace Complete {
+    public class TankHealth : MonoBehaviour {
         public float m_StartingHealth = 100f;               // The amount of health each tank starts with.
         public Slider m_Slider;                             // The slider to represent how much health the tank currently has.
         public Image m_FillImage;                           // The image component of the slider.
@@ -12,15 +10,12 @@ namespace Complete
         public Color m_ZeroHealthColor = Color.red;         // The color the health bar will be when on no health.
         public GameObject m_ExplosionPrefab;                // A prefab that will be instantiated in Awake, then used whenever the tank dies.
         
-        
         private AudioSource m_ExplosionAudio;               // The audio source to play when the tank explodes.
         private ParticleSystem m_ExplosionParticles;        // The particle system the will play when the tank is destroyed.
         private float m_CurrentHealth;                      // How much health the tank currently has.
         private bool m_Dead;                                // Has the tank been reduced beyond zero health yet?
 
-
-        private void Awake ()
-        {
+        private void Awake () {
             // Instantiate the explosion prefab and get a reference to the particle system on it.
             m_ExplosionParticles = Instantiate (m_ExplosionPrefab).GetComponent<ParticleSystem> ();
 
@@ -30,10 +25,8 @@ namespace Complete
             // Disable the prefab so it can be activated when it's required.
             m_ExplosionParticles.gameObject.SetActive (false);
         }
-
-
-        private void OnEnable()
-        {
+			
+        private void OnEnable() {
             // When the tank is enabled, reset the tank's health and whether or not it's dead.
             m_CurrentHealth = m_StartingHealth;
             m_Dead = false;
@@ -42,9 +35,7 @@ namespace Complete
             SetHealthUI();
         }
 
-
-        public void TakeDamage (float amount)
-        {
+		public void TakeDamage (float amount) {
             // Reduce current health by the amount of damage done.
             m_CurrentHealth -= amount;
 
@@ -52,15 +43,12 @@ namespace Complete
             SetHealthUI ();
 
             // If the current health is at or below zero and it has not yet been registered, call OnDeath.
-            if (m_CurrentHealth <= 0f && !m_Dead)
-            {
+            if (m_CurrentHealth <= 0f && !m_Dead) {
                 OnDeath ();
             }
         }
 
-
-        private void SetHealthUI ()
-        {
+        private void SetHealthUI () {
             // Set the slider's value appropriately.
             m_Slider.value = m_CurrentHealth;
 
@@ -68,9 +56,7 @@ namespace Complete
             m_FillImage.color = Color.Lerp (m_ZeroHealthColor, m_FullHealthColor, m_CurrentHealth / m_StartingHealth);
         }
 
-
-        private void OnDeath ()
-        {
+        private void OnDeath () {
             // Set the flag so that this function is only called once.
             m_Dead = true;
 
