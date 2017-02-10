@@ -30,7 +30,10 @@ public class PauseMenu : MonoBehaviour {
 	}
 
 	public void SaveGame(){
-		
+		overlay.SetActive (false);
+		MainMenu.SetActive (true);
+		mainListener.enabled = false;
+		Time.timeScale = 0;
 	}
 
 	public void QuitGame(){
@@ -38,6 +41,7 @@ public class PauseMenu : MonoBehaviour {
 		MainMenu.SetActive (true);
 		mainListener.enabled = false;
 		Time.timeScale = 0;
+
 	}
 
 	public void Volume(Slider slider){

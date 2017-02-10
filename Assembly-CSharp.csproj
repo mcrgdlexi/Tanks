@@ -53,17 +53,9 @@
      <Compile Include="Assets\Scripts\Tank\TankHealth.cs" />
      <Compile Include="Assets\Scripts\Tank\TankMovement.cs" />
      <Compile Include="Assets\Scripts\Tank\TankShooting.cs" />
+     <Compile Include="Assets\Scripts\UI\MainMenu.cs" />
+     <Compile Include="Assets\Scripts\UI\PauseMenu.cs" />
      <Compile Include="Assets\Scripts\UI\UIDirectionControl.cs" />
-     <Compile Include="Assets\_Completed-Assets\Scripts\Camera\CameraControl.cs" />
-     <Compile Include="Assets\_Completed-Assets\Scripts\Managers\GameManager.cs" />
-     <Compile Include="Assets\_Completed-Assets\Scripts\Managers\TankManager.cs" />
-     <Compile Include="Assets\_Completed-Assets\Scripts\Shell\ShellExplosion.cs" />
-     <Compile Include="Assets\_Completed-Assets\Scripts\Tank\TankHealth.cs" />
-     <Compile Include="Assets\_Completed-Assets\Scripts\Tank\TankMovement.cs" />
-     <Compile Include="Assets\_Completed-Assets\Scripts\Tank\TankShooting.cs" />
-     <Compile Include="Assets\_Completed-Assets\Scripts\UI\MainMenu\Scripts\MainMenu.cs" />
-     <Compile Include="Assets\_Completed-Assets\Scripts\UI\PauseMenu.cs" />
-     <Compile Include="Assets\_Completed-Assets\Scripts\UI\UIDirectionControl.cs" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\SeparableWeightedBlurDof34.shader" />
@@ -79,7 +71,7 @@
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\MobileBloom.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\MinMaxReduction.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\SSAA.shader" />
-     <None Include="Assets\_Completed-Assets\Scripts\UI\MainMenu\Fonts\LICENSE.txt" />
+     <None Include="Assets\Fonts\LICENSE.txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\RadialBlur.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\DepthOfFieldDX11.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ContrastComposite.shader" />
@@ -93,7 +85,7 @@
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ConvertDepth.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrectionCurvesSimple.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderYUV.shader" />
-     <None Include="Assets\Fonts\Bowlby_One\OFL.txt" />
+     <None Include="Assets\Fonts\OFL.txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\CreaseApply.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ChromaticAberrationShader.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\GlobalFog.shader" />
