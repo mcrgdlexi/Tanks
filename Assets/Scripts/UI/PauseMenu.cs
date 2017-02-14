@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class PauseMenu : MonoBehaviour {
 	public GameObject overlay;
 	public GameObject MainMenu;
+	public Text message;
 	public AudioListener mainListener;
 
 	static float xLocationOne;
@@ -33,15 +35,15 @@ public class PauseMenu : MonoBehaviour {
 		overlay.SetActive (false);
 		MainMenu.SetActive (true);
 		mainListener.enabled = false;
-		Time.timeScale = 0;
 	}
 
 	public void QuitGame(){
 		overlay.SetActive (false);
 		MainMenu.SetActive (true);
 		mainListener.enabled = false;
-		Time.timeScale = 0;
-
+		message.text = string.Empty;
+		Scene MainScene = SceneManager.GetActiveScene();
+		SceneManager.LoadScene(MainScene.name);
 	}
 
 	public void Volume(Slider slider){
