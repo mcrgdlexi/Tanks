@@ -42,8 +42,7 @@ public class PauseMenu : MonoBehaviour {
 		MainMenu.SetActive (true);
 		mainListener.enabled = false;
 		message.text = string.Empty;
-		Scene MainScene = SceneManager.GetActiveScene();
-		SceneManager.LoadScene(MainScene.name);
+		SceneManager.LoadScene (0);
 	}
 
 	public void Volume(Slider slider){

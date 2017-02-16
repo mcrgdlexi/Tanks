@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class MainMenu : MonoBehaviour {
 	public GameObject overlay;
@@ -11,11 +13,10 @@ public class MainMenu : MonoBehaviour {
 		Time.timeScale = 0;
 	}
 
-	public void NewGame() {		
+	public void NewGame() {
 		overlay.SetActive (false);
 		mainListener.enabled = true;
 		Time.timeScale = 1;
-
 	}
 
 	public void LoadGame() {

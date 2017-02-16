@@ -31,8 +31,11 @@ namespace Complete {
 
 		// Wait until the main menu is hidden to start the game.
 		public void start_game() {
-			if (!MainMenu.activeSelf)
-				StartCoroutine (GameLoop ());
+			StartCoroutine (GameLoop ());
+		}
+
+		public void load_game() {
+			
 		}
 
         private void SpawnAllTanks() {
